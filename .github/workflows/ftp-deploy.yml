@@ -17,7 +17,7 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-	port: ${{ secrets.FTP_PORT }}
+        port: ${{ secrets.FTP_PORT }}
         # Optional deployment arguments
         local-dir: ./
         server-dir: ${{ secrets.FTP_PATH }}
