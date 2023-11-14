@@ -20,7 +20,7 @@ jobs:
         port: ${{ secrets.FTP_PORT }}
         # Optional deployment arguments
         local-dir: ./
-        server-dir: ${{ secrets.FTP_PATH }}
+        server-dir: /mnt/storagedata/www/test/
         # Set to 'true' if you want the action to delete files in the server directory that are not present in the local directory
         dangerous-clean-slate: false
 
