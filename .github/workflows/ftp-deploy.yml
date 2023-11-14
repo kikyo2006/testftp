@@ -12,15 +12,15 @@ jobs:
     # Add any setup steps that your project requires here...
 
     - name: Upload files to FTP
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: SamKirkland/FTP-Deploy-Action@4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        port: 2201
+        port: ${{ secrets.FTP_PORT }}
+        protocol: sftp
         # Optional deployment arguments
         local-dir: ./
         server-dir: /mnt/storagedata/www/test/
         # Set to 'true' if you want the action to delete files in the server directory that are not present in the local directory
         dangerous-clean-slate: false
-
